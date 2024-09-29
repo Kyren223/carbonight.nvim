@@ -6,16 +6,16 @@ This file is licensed under the GPL-3.0-or-later license, see https://fsf.org/li
 local M = {}
 
 local groups = {
-	"base",
+    "base",
 }
 
 function M.setup(colors)
-	local highlights = {}
-	for _, v in ipairs(groups) do
-		local group = require("carbonight.groups." .. v).get(colors)
-		highlights = vim.tbl_deep_extend("error", highlights, group)
-	end
-	return highlights
+    local highlights = {}
+    for _, v in ipairs(groups) do
+        local group = require("carbonight.groups." .. v).get(colors)
+        highlights = vim.tbl_deep_extend("error", highlights, group)
+    end
+    return highlights
 end
 
 return M
