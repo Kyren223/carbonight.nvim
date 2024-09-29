@@ -1,0 +1,38 @@
+--[[
+Copyright (C) 2024 Kyren223
+This file is licensed under the GPL-3.0-or-later license, see https://fsf.org/licenses/gpl-3.0
+--]]
+
+local utils = require("carbonight.utils")
+
+local M = {
+	-- normal = { fg = '#EFEDE7', bg = '#09090F' },
+	normal = { fg = "#EFEDE7", bg = "#1B1B1B" },
+	visual = { bg = "#232143" },
+	cursor_line = { bg = "#281E25" },
+	violet = { fg = "#D484FF" },
+	gray_underline = { underline = true, sp = "#909090" },
+	comment = { fg = "#007215" },
+	doc_comment = { fg = "#5D545F" },
+	macro = { fg = "#DD6718" },
+	string = { fg = "#F6D087" },
+	keyword = { fg = "#F16265" },
+	identifier = { fg = "#BB91F0" },
+	function_declaration = { fg = "#54D7A9" },
+	function_call = { fg = "#8EDFF9" },
+	label = { fg = "#20999D", italic = true },
+	operator = { fg = "#54D7A9" },
+	parentheses = { fg = "#F9FAF4" },
+	class = { fg = "#51C6DC" },
+	interface = { fg = "#54D7A9" },
+	static_field = { fg = "#F8F8F2" },
+	type_parameter = { fg = "#007E8A" },
+	parameter = { fg = "#F5A670" },
+	annotation = { fg = "#D9E577" },
+	rust_macro = { fg = "#5874FF" },
+	illuminate = { bg = "#534355" },
+}
+
+M.static_method = utils.override(M.normal, { bg = "NONE", italic = true })
+
+return M
