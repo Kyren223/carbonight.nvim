@@ -7,6 +7,10 @@ local M = {}
 
 local groups = {
     "base",
+    "treesitter",
+    "vim-illuminate",
+    "nvim-cmp",
+    "neogit",
 }
 
 function M.setup(colors)
