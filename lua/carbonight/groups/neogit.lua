@@ -5,13 +5,18 @@ This file is licensed under the GPL-3.0-or-later license, see https://fsf.org/li
 
 local M = {}
 
+-- https://github.com/TimUntersberger/neogit
+---@param c Colors
 function M.get(c)
     return {
-        NeogitDiffAddHighlight = { fg = "#859900" },
-        NeogitDiffDeleteHighlight = { fg = "#dc322f" },
         NeogitDiffContextHighlight = { fg = "#b2b2b2" },
-        NeogitHunkHeader = { fg = "#cccccc" },
         NeogitHunkHeaderHighlight = { fg = "#cccccc" },
+        NeogitHunkHeader = { fg = "#cccccc" },
+        NeogitBranch = { fg = c.success.fg, bold = true },
+        NeogitRemote = { fg = c.keyword.fg, bold = true },
+        NeogitBranchHead = { fg = c.keyword.fg, bold = true },
+        NeogitPopupSwitchEnabled = { fg = c.macro.fg, bold = true },
+        NeogitChangeModified = c.git_modified,
     }
 end
 

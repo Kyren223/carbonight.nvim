@@ -7,6 +7,7 @@ local utils = require("carbonight.utils")
 
 local M = {}
 
+---@param c Colors
 function M.get(c)
     return {
         ["@comment"] = c.comment,

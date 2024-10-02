@@ -5,6 +5,7 @@ This file is licensed under the GPL-3.0-or-later license, see https://fsf.org/li
 
 local M = {}
 
+---@param c Colors
 function M.get(c)
     return {
         -- CmpItemAbbr = { fg = c.normal },

@@ -7,6 +7,7 @@ local utils = require("carbonight.utils")
 
 local M = {}
 
+---@param c Colors
 function M.get(c)
     return {
         Normal = c.normal,
@@ -16,14 +17,15 @@ function M.get(c)
         LineNrAbove = c.violet,
         LineNrBelow = c.violet,
         LspInlayHint = c.label,
-        Comment = {},
+        Comment = c.string,
         StatusLine = c.normal,
         EndOfBuffer = { fg = "bg" },
         DiagnosticUnderlineError = { undercurl = true, sp = "#BC3F3C" },
+        Include = c.label,
         -- DiagnosticUnderlineError = { undercurl = true },
         -- DiagnosticUnderlineWarn = { bg = '#452138' },
         DiagnosticUnderlineHint = { underline = false },
-        DiagnosticUnnecessary = { fg = "#808080", undercurl = true, sp = "#808080" },
+        DiagnosticUnnecessary = c.unused,
         -- DiagnosticError = { fg = c.error },
         -- DiagnosticWarn = { fg = c.warning },
         -- DiagnosticInfo = { fg = c.info },

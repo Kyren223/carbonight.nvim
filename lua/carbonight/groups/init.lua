@@ -8,6 +8,7 @@ local M = {}
 local groups = {
     "base",
     "treesitter",
+    "treesitter-context",
     "vim-illuminate",
     "nvim-cmp",
     "neogit",

@@ -5,6 +5,7 @@ This file is licensed under the GPL-3.0-or-later license, see https://fsf.org/li
 
 local utils = require("carbonight.utils")
 
+---@class Colors
 local M = {
     -- normal = { fg = '#EFEDE7', bg = '#09090F' },
     normal = { fg = "#EFEDE7", bg = "#1B1B1B" },
@@ -12,7 +13,9 @@ local M = {
     cursor_line = { bg = "#281E25" },
     violet = { fg = "#D484FF" },
     gray_underline = { underline = true, sp = "#909090" },
+    unused = { fg = "#808080", undercurl = true, sp = "#808080", bold = true },
     comment = { fg = "#007215" },
+    success = { fg = "#46d46c" },
     doc_comment = { fg = "#5D545F" },
     macro = { fg = "#DD6718" },
     string = { fg = "#F6D087" },
@@ -31,6 +34,7 @@ local M = {
     annotation = { fg = "#D9E577" },
     rust_macro = { fg = "#5874FF" },
     illuminate = { bg = "#534355" },
+    git_modified = { fg = "#00f1f5", bold = true, italic = true },
 }
 
 M.static_method = utils.override(M.normal, { bg = "NONE", italic = true })
