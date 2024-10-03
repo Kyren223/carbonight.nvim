@@ -25,11 +25,12 @@ function M.get(c)
         ["@boolean"] = c.keyword,
         ["@function"] = c.function_declaration,
         ["@function.call"] = c.function_call,
+        ["@function.method.call"] = c.function_call,
         ["@label"] = c.label,
         ["@punctuation.bracket"] = c.parentheses,
         ["@punctuation.delimiter"] = { fg = "#F19B95" }, -- { fg = '#F16265' } for semicolon
         ["@operator"] = c.operator,
-        ["@type"] = c.class,
+        ["@type"] = c.type,
         ["@type.builtin"] = c.keyword,
         ["@module"] = c.identifier,
         ["@lsp.mod.static"] = c.static_method,
@@ -44,9 +45,10 @@ function M.get(c)
         ["@lsp.type.unresolvedReference"] = { fg = "#BC3F3C", nocombine = true },
         ["@attribute"] = c.annotation,
         ["@lsp.typemod.comment.documentation"] = c.doc_comment,
+        ["@lsp.type.method"] = {},
 
         -- NOTE: Rust
-        ['@variable.rust'] = c.identifier,
+        -- ['@variable.rust'] = c.identifier,
         ["@lsp.mod.attribute.rust"] = c.rust_macro,
         ["@lsp.typemod.string.attribute.rust"] = c.string,
         ["@lsp.type.lifetime.rust"] = c.label,
@@ -63,10 +65,10 @@ function M.get(c)
         ["@lsp.type.comment.lua"] = {},
 
         -- NOTE: Go
-        ["@lsp.type.type.go"] = {},
         ["@lsp.type.function.go"] = {},
         ["@lsp.type.string.go"] = {},
-        ['@lsp.type.formatSpecifier.go'] = c.identifier, -- custom
+        ["@lsp.type.formatSpecifier.go"] = c.identifier, -- custom
+        ["@lsp.typemod.type.defaultLibrary.go"] = { link = "@type.builtin" },
     }
 end
 
