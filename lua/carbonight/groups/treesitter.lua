@@ -67,7 +67,6 @@ function M.get(c)
         -- NOTE: Go
         ["@lsp.type.function.go"] = {},
         ["@lsp.type.string.go"] = {},
-        ["@lsp.type.formatSpecifier.go"] = c.identifier, -- custom
         ["@lsp.typemod.type.defaultLibrary.go"] = { link = "@type.builtin" },
     }
 end
