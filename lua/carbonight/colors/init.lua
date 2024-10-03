@@ -21,6 +21,7 @@ local M = {
     string = { fg = "#F6D087" },
     keyword = { fg = "#F16265" },
     identifier = { fg = "#BB91F0" },
+    variable = { fg = "#E6F0A8" },
     function_declaration = { fg = "#54D7A9" },
     function_call = { fg = "#8EDFF9" },
     label = { fg = "#20999D", italic = true },

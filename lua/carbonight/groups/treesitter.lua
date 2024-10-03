@@ -11,7 +11,7 @@ local M = {}
 function M.get(c)
     return {
         ["@comment"] = c.comment,
-        ["@variable"] = c.identifier,
+        ["@variable"] = c.variable,
         ["@variable.parameter"] = c.parameter,
         ["@constant"] = c.identifier,
         ["@constant.macro"] = c.macro,
@@ -36,7 +36,7 @@ function M.get(c)
         ["@lsp.type.enumMember"] = c.static_field,
         ["@lsp.type.typeParameter"] = c.type_parameter,
         ["@lsp.type.formatSpecifier"] = c.identifier,
-        ["@lsp.typemod.parameter.mutable"] = utils.override(c.normal, c.gray_underline),
+        ["@lsp.typemod.parameter.mutable"] = utils.override(c.parameter, c.gray_underline),
         ["@lsp.type.constParameter"] = c.identifier,
         ["@lsp.type.interface"] = c.interface,
         ["@lsp.typemod.static.mutable"] = utils.override(c.normal, c.gray_underline),
@@ -46,12 +46,14 @@ function M.get(c)
         ["@lsp.typemod.comment.documentation"] = c.doc_comment,
 
         -- NOTE: Rust
+        ['@variable.rust'] = c.identifier,
         ["@lsp.mod.attribute.rust"] = c.rust_macro,
         ["@lsp.typemod.string.attribute.rust"] = c.string,
         ["@lsp.type.lifetime.rust"] = c.label,
-        ["@lsp.typemod.macro.declaration.rust"] = utils.override(c.normal, { bg = 'NONE' }),
+        ["@lsp.typemod.macro.declaration.rust"] = utils.override(c.normal, { bg = "NONE" }),
         ["@lsp.type.selfTypeKeyword.rust"] = c.keyword,
         ["@lsp.type.selfKeyword.rust"] = c.keyword,
+        ["@lsp.type.property.rust"] = c.static_field,
         -- ['@lsp.mod.associated.rust'] = l.associated_function,
         -- ['@lsp.typemod.function.unsafe.rust'] = { bg = '#5E2828' },
 
@@ -59,6 +61,12 @@ function M.get(c)
         ["@lsp.type.property.lua"] = { fg = "#F5A670" },
         ["@comment.documentation.lua"] = c.doc_comment,
         ["@lsp.type.comment.lua"] = {},
+
+        -- NOTE: Go
+        ["@lsp.type.type.go"] = {},
+        ["@lsp.type.function.go"] = {},
+        ["@lsp.type.string.go"] = {},
+        ['@lsp.type.formatSpecifier.go'] = c.identifier, -- custom
     }
 end
 
