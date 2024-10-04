@@ -17,6 +17,9 @@ function M.get(c)
         NeogitBranchHead = { fg = c.keyword.fg, bold = true },
         NeogitPopupSwitchEnabled = { fg = c.macro.fg, bold = true },
         NeogitChangeModified = c.git_modified,
+        NeogitChangeNewFile = { fg = c.success.fg, bold = true, italic = true },
+        NeogitChangeDeleted = { fg = c.keyword.fg, bold = true, italic = true },
+        NeogitChangeRenamed = { fg = c.macro.fg, bold = true, italic = true },
     }
 end
 

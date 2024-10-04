@@ -16,6 +16,7 @@ function M.get(c)
         ["@constant"] = c.identifier,
         ["@constant.macro"] = c.macro,
         ["@keyword"] = c.keyword,
+        ["@keyword.gitcommit"] = utils.override(c.keyword, { nocombine = false }),
         ["@string"] = c.string,
         ["@string.escape"] = c.identifier,
         ["@lsp.type.invalidEscapeSequence"] = { fg = "#FF434F" },
