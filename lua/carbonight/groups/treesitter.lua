@@ -14,6 +14,8 @@ function M.get(c)
         ["@variable"] = c.variable,
         ["@variable.parameter"] = c.parameter,
         ["@constant"] = c.identifier,
+        ["@constant.builtin"] = c.keyword,
+        ["@function.builtin"] = c.keyword,
         ["@constant.macro"] = c.macro,
         ["@keyword"] = c.keyword,
         ["@keyword.gitcommit"] = utils.override(c.keyword, { nocombine = false }),
@@ -68,7 +70,15 @@ function M.get(c)
         -- NOTE: Go
         ["@lsp.type.function.go"] = {},
         ["@lsp.type.string.go"] = {},
+        ["@lsp.type.type.go"] = {},
+        ["@lsp.type.variable.go"] = {},
+        ["@lsp.mod.readonly.go"] = { link = "@constant"},
+        ["@lsp.typemod.variable.defaultLibrary.go"] = { link = "@constant.builtin" },
         ["@lsp.typemod.type.defaultLibrary.go"] = { link = "@type.builtin" },
+
+
+        -- NOTE: Java
+        ["@lsp.type.modifier.java"] = c.keyword
     }
 end
 
