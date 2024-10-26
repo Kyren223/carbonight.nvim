@@ -21,6 +21,7 @@ function M.get(c)
         StatusLine = c.normal,
         EndOfBuffer = { fg = "bg" },
         Include = c.label,
+        DiagnosticDeprecated = { fg = "#FF434F" }, --, strikethrough = true, sp = "#FF0000" },
         DiagnosticUnderlineError = { undercurl = true, sp = "#BC3F3C" },
         -- DiagnosticUnderlineError = { undercurl = true },
         -- DiagnosticUnderlineWarn = { bg = '#452138' },
