@@ -20,6 +20,9 @@ function M.get(c)
         NeogitChangeNewFile = { fg = c.success.fg, bold = true, italic = true },
         NeogitChangeDeleted = { fg = c.keyword.fg, bold = true, italic = true },
         NeogitChangeRenamed = { fg = c.macro.fg, bold = true, italic = true },
+        NeogitDiffAdditions = c.success,
+        NeogitDiffDeletions = c.keyword,
+        NeogitFloatHeaderHighlight = { fg = c.label.fg, bold = true },
     }
 end
 
