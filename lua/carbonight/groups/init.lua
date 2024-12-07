@@ -12,6 +12,7 @@ local groups = {
     "vim-illuminate",
     "nvim-cmp",
     "neogit",
+    "ghostty",
 }
 
 function M.setup(colors)
