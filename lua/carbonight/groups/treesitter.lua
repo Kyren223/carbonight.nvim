@@ -49,6 +49,9 @@ function M.get(c)
         ["@attribute"] = c.annotation,
         ["@lsp.typemod.comment.documentation"] = c.doc_comment,
         ["@lsp.type.method"] = {},
+        ["@lsp.type.keywordLiteral"] = c.keyword,
+        ["@lsp.type.variable"] = {},
+        ["@lsp.type.type"] = {},
 
         -- NOTE: Rust
         -- ['@variable.rust'] = c.identifier,
