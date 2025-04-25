@@ -8,7 +8,7 @@ function M.override(original, extension)
 end
 
 ---@param c string hex color code
----@return number color color as RGB number
+---@return table color color as RGB table
 function M.rgb(c)
     c = string.lower(c)
     return { tonumber(c:sub(2, 3), 16), tonumber(c:sub(4, 5), 16), tonumber(c:sub(6, 7), 16) }

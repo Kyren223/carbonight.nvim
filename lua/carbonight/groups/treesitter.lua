@@ -75,9 +75,9 @@ function M.get(c)
         ["@lsp.type.string.go"] = {},
         ["@lsp.type.type.go"] = {},
         ["@lsp.type.variable.go"] = {},
-        ["@lsp.mod.readonly.go"] = { link = "@constant" },
-        ["@lsp.typemod.variable.defaultLibrary.go"] = { link = "@constant.builtin" },
-        ["@lsp.typemod.type.defaultLibrary.go"] = { link = "@type.builtin" },
+        ["@lsp.mod.readonly.go"] = "@constant",
+        ["@lsp.typemod.variable.defaultLibrary.go"] = "@constant.builtin",
+        ["@lsp.typemod.type.defaultLibrary.go"] = "@type.builtin",
 
         -- NOTE: Java
         ["@lsp.type.modifier.java"] = c.keyword,

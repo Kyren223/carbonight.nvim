@@ -15,10 +15,12 @@ local groups = {
     "ghostty",
 }
 
-function M.setup(colors)
+---@param colors? Colors
+---@param opts? carbonight.Config
+function M.setup(colors, opts)
     local highlights = {}
     for _, v in ipairs(groups) do
-        local group = require("carbonight.groups." .. v).get(colors)
+        local group = require("carbonight.groups." .. v).get(colors, opts)
         highlights = vim.tbl_deep_extend("error", highlights, group)
     end
     return highlights

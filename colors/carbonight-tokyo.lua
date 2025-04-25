@@ -1,1 +1,1 @@
-require('carbonight').load('tokyo')
+require("carbonight").load({ style = "tokyo" })
