@@ -24,7 +24,7 @@ function M.get(c)
         DiagnosticDeprecated = { fg = "#FF434F" }, --, strikethrough = true, sp = "#FF0000" },
         DiagnosticUnderlineError = { undercurl = true, sp = "#BC3F3C" },
         -- DiagnosticUnderlineError = { undercurl = true },
-        -- DiagnosticUnderlineWarn = { bg = '#452138' },
+        DiagnosticUnderlineWarn = { bg = '#452138' },
         DiagnosticUnderlineHint = { underline = false },
         DiagnosticUnnecessary = c.unused,
         -- DiagnosticError = { fg = c.error },
