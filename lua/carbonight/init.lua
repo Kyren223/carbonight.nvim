@@ -9,13 +9,17 @@ function M.load(style)
     local colors
     if style ~= nil then
         if not type(style) == "string" then
-            Notify("Style must be a string!", "Carbonight", vim.log.levels.ERROR)
+            vim.notify("Style must be a string!", vim.log.levels.ERROR, { title = "Carbonight" })
             return
         end
 
         local ok, result = pcall(require, "carbonight.colors." .. style)
         if not ok then
-            Notify('Style "' .. style .. '" not found, unable to load colorscheme!', "Carbonight", vim.log.levels.ERROR)
+            vim.notify(
+                'Style "' .. style .. '" not found, unable to load colorscheme!',
+                vim.log.levels.ERROR,
+                { title = "Carbonight" }
+            )
             return
         end
         colors = result
