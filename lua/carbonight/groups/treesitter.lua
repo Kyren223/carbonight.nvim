@@ -75,13 +75,15 @@ function M.get(c)
         ["@lsp.type.string.go"] = {},
         ["@lsp.type.type.go"] = {},
         ["@lsp.type.variable.go"] = {},
-        ["@lsp.mod.readonly.go"] = { link = "@constant"},
+        ["@lsp.mod.readonly.go"] = { link = "@constant" },
         ["@lsp.typemod.variable.defaultLibrary.go"] = { link = "@constant.builtin" },
         ["@lsp.typemod.type.defaultLibrary.go"] = { link = "@type.builtin" },
 
-
         -- NOTE: Java
-        ["@lsp.type.modifier.java"] = c.keyword
+        ["@lsp.type.modifier.java"] = c.keyword,
+
+        -- NOTE: zig
+        ["@lsp.type.string.zig"] = {},
     }
 end
 
