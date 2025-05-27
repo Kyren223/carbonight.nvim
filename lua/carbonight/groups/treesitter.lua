@@ -81,6 +81,7 @@ function M.get(c)
 
         -- NOTE: Java
         ["@lsp.type.modifier.java"] = c.keyword,
+        ["@variable.builtin.java"] = c.keyword,
 
         -- NOTE: zig
         ["@lsp.type.string.zig"] = {},
