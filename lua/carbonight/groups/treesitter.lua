@@ -82,6 +82,20 @@ function M.get(c)
         -- NOTE: Java
         ["@lsp.type.modifier.java"] = c.keyword,
         ["@variable.builtin.java"] = c.keyword,
+        ["@lsp.type.enum.java"] = c.enum,
+        ["@lsp.typemod.enumMember.public.java"] = c.type,
+        ["@lsp.typemod.enumMember.readonly.java"] = c.type,
+        ["@lsp.typemod.enumMember.staitc.java"] = c.type,
+        ["@lsp.typemod.property.declaration.java"] = c.type,
+        ["@lsp.typemod.property.public.java"] = c.type,
+        ["@lsp.typemod.property.readonly.java"] = c.type,
+        ["@lsp.typemod.property.static.java"] = c.type,
+        ["@lsp.typemod.class.abstract.java"] = c.abstract,
+        ["@lsp.typemod.class.constructor.java"] = utils.override(c.function_call, { bold = true, italic = true }),
+        ["@lsp.typemod.enum.public.java"] = c.enum,
+        ["@lsp.typemod.enum.readonly.java"] = c.enum,
+        ["@lsp.typemod.enum.static.java"] = c.enum,
+        ["@lsp.type.parameter.java"] = { fg = "#D9AD69", italic = true },
 
         -- NOTE: zig
         ["@lsp.type.string.zig"] = {},
