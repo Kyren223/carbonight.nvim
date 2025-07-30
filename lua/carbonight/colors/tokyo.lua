@@ -13,5 +13,8 @@ c.cursor_line.bg = "#292e42"
 c.illuminate.bg = "#3b4261"
 c.comment.fg = "#565f89"
 
+c.conflict_theirs.bg = "#283741"
+c.conflict_ours.bg = "#222B27"
+
 ---@type Colors
 return c

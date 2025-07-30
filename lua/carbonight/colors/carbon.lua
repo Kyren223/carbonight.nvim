@@ -41,6 +41,8 @@ local M = {
     git_modified = { fg = "#00f1f5", bold = true, italic = true },
     enum = { fg = "#D8C44B", nocombine = true },
     abstract = { fg = "#52E3F6", bold = true, italic = true },
+    conflict_theirs = { bg = "#2A3E49" },
+    conflict_ours = { bg = "#4a2b35" },
 }
 
 M.static_method = utils.override(M.normal, { bg = "NONE", italic = true })

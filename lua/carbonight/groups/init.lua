@@ -13,6 +13,7 @@ local groups = {
     "nvim-cmp",
     "neogit",
     "ghostty",
+    "conflict-marker"
 }
 
 ---@param colors? Colors
