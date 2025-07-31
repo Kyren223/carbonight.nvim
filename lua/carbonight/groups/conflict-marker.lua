@@ -8,8 +8,16 @@ local M = {}
 ---@param c Colors
 function M.get(c)
     return {
-        ConflictTheirs = c.conflict_theirs,
+        ConflictOursMarker = c.conflict_ours_marker,
         ConflictOurs = c.conflict_ours,
+
+        ConflictBaseMarker = c.conflict_base_marker,
+        ConflictBase = c.conflict_base,
+
+        ConflictMid = c.conflict_base_marker,
+
+        ConflictTheirs = c.conflict_theirs_marker,
+        ConflictTheirsMarker = c.conflict_theirs,
     }
 end
 

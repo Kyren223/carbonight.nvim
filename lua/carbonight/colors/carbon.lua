@@ -34,15 +34,19 @@ local M = {
     interface = { fg = "#54D7A9", nocombine = true },
     static_field = { fg = "#F8F8F2" },
     type_parameter = { fg = "#007E8A" },
-    parameter = { fg = "#F5A670", },
+    parameter = { fg = "#F5A670" },
     annotation = { fg = "#D9E577" },
     rust_macro = { fg = "#5874FF" },
     illuminate = { bg = "#534355" },
     git_modified = { fg = "#00f1f5", bold = true, italic = true },
     enum = { fg = "#D8C44B", nocombine = true },
     abstract = { fg = "#52E3F6", bold = true, italic = true },
-    conflict_theirs = { bg = "#2A3E49" },
-    conflict_ours = { bg = "#4a2b35" },
+    conflict_ours_marker = { bg = "#333955", bold = true },
+    conflict_ours = { bg = "#25293D" },
+    conflict_base_marker = { bg = "#202728" },
+    conflict_base = { bg = "#252D2F" },
+    conflict_theirs = { bg = "#3d242c" },
+    conflict_theirs_marker = { bg = "#57323e", bold = true },
 }
 
 M.static_method = utils.override(M.normal, { bg = "NONE", italic = true })
