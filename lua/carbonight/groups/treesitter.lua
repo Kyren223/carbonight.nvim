@@ -99,6 +99,13 @@ function M.get(c)
 
         -- NOTE: zig
         ["@lsp.type.string.zig"] = {},
+
+        -- NOTE: comments
+        ["@comment.todo"] = { fg = c.function_call.fg, bold = true },
+        ["@comment.note"] = { fg = c.success.fg, bold = true },
+        ["@comment.warning"] = { fg = c.annotation.fg, bold = true },
+        ["@comment.error"] = { fg = c.keyword.fg, bold = true },
+        ["@comment.perf"] = { fg = c.identifier.fg, bold = true },
     }
 end
 
