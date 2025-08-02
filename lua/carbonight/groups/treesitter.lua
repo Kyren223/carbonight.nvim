@@ -100,6 +100,9 @@ function M.get(c)
         -- NOTE: zig
         ["@lsp.type.string.zig"] = {},
 
+        -- NOTE: C/C++
+        ["@lsp.type.comment.cpp"] = c.doc_comment, -- unused conditional code
+
         -- NOTE: comments
         ["@comment.todo"] = { fg = c.function_call.fg, bold = true },
         ["@comment.note"] = { fg = c.success.fg, bold = true },
