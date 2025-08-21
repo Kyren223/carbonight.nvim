@@ -52,6 +52,7 @@ function M.get(c)
         ["@lsp.type.keywordLiteral"] = c.keyword,
         ["@lsp.type.variable"] = {},
         ["@lsp.type.type"] = {},
+        ["@lsp.type.comment"] = {},
 
         -- NOTE: Rust
         -- ['@variable.rust'] = c.identifier,
@@ -102,6 +103,8 @@ function M.get(c)
 
         -- NOTE: C/C++
         ["@lsp.type.comment.cpp"] = c.doc_comment, -- unused conditional code
+        ["@lsp.type.enumMember.cpp"] = c.enum,
+        ["@lsp.type.enumMember.c"] = c.enum,
 
         -- NOTE: comments
         ["@comment.todo"] = { fg = c.function_call.fg, bold = true },
