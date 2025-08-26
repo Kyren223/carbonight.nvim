@@ -5,6 +5,12 @@ This file is licensed under the GPL-3.0-or-later license, see https://fsf.org/li
 
 local utils = require("carbonight.utils")
 
+--[[
+New theme?
+#14161B bg
+#2C2E33 cursorline
+--]]
+
 ---@class Colors
 local M = {
     -- normal = { fg = '#EFEDE7', bg = '#09090F' },

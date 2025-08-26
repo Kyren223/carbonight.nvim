@@ -24,13 +24,16 @@ function M.get(c)
         DiagnosticDeprecated = { fg = "#FF434F" }, --, strikethrough = true, sp = "#FF0000" },
         DiagnosticUnderlineError = { undercurl = true, sp = "#BC3F3C" },
         -- DiagnosticUnderlineError = { undercurl = true },
-        DiagnosticUnderlineWarn = { bg = '#452138' },
+        DiagnosticUnderlineWarn = { bg = "#452138" },
         DiagnosticUnderlineHint = { underline = false },
         DiagnosticUnnecessary = c.unused,
         -- DiagnosticError = { fg = c.error },
         -- DiagnosticWarn = { fg = c.warning },
         -- DiagnosticInfo = { fg = c.info },
         -- DiagnosticHint = { fg = c.info },
+
+        -- NOTE: custom
+        LualineNoiceMacro = { fg = c.parameter.fg, bg = utils.blend(c.normal.bg, 0.8, c.visual.bg) },
     }
 end
 
