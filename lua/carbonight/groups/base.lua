@@ -34,6 +34,9 @@ function M.get(c)
 
         -- NOTE: custom
         LualineNoiceMacro = { fg = c.parameter.fg, bg = utils.blend(c.normal.bg, 0.8, c.visual.bg) },
+
+        -- NOTE: nvim-notify
+        NotifyBackground = c.normal,
     }
 end
 
