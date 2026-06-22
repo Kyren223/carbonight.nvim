@@ -14,6 +14,7 @@ local groups = {
     "neogit",
     "ghostty",
     "conflict-marker",
+    "live-rename",
 }
 
 ---@param colors? Colors
