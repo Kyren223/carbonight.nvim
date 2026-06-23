@@ -1,5 +1,5 @@
 --[[
-Copyright (C) 2025 Kyren223
+Copyright (C) 2025-2026 Kyren223
 This file is licensed under the GPL-3.0-or-later license, see https://fsf.org/licenses/gpl-3.0
 --]]
 
